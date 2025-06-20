@@ -1,10 +1,8 @@
 # BookmarkSync
 
-[![latest release](https://img.shields.io/github/v/tag/jlu5/bookmarksync?sort=date)](https://github.com/jlu5/bookmarksync/tags)
+Golang implementation of the cli part of [BookmarkSync](https://github.com/jlu5/bookmarksync/)
 
-**BookmarkSync** is a simple program that manages the bookmarks (pinned folders) in GTK+, KDE, and Qt's native file pickers. I built this tool because I was using GTK+ apps (GIMP, Audacity, etc.) on KDE and constantly got frustrated by the bookmarks lists not matching up.
-
-![Demo screenshot](bookmarksync-demo.png "BookmarkSync main window")
+**BookmarkSync** is a simple program that manages the bookmarks (pinned folders) in GTK+, KDE, and Qt's native file pickers.
 
 ## Do I need this?
 
@@ -15,39 +13,6 @@ Alternatively: Chrome, Firefox ([with `about:config` override](https://wiki.arch
 ## CLI mode
 
 As of v0.3.0 there is support for running sync from the command line: `$ bookmarksync --sync-from {gtk,kde,qt}`.
-
-Note that this is not truly headless, as BookmarkSync still expects a display to exist. If your environment doesn't have one available, you can switch to a dummy display with some QT overrides: `$ QT_QPA_PLATFORMTHEME= QT_QPA_PLATFORM=offscreen ./bookmarksync <args>`
-
-## Distribution packages
-
-You can find bookmarksync in:
-
-- Arch Linux AUR: [bookmarksync-git](https://aur.archlinux.org/packages/bookmarksync-git/)
-- Debian via [Utopia Repository](https://deb.utopia-repository.org/): bookmarksync
-
-## Build instructions
-
-**Note that BookmarkSync compiles with Qt 6 and KF6 now. If you need the Qt 5 version, use the `qt5` / 0.3.x branch instead.**
-
-To compile BookmarkSync, you will need:
-
-- cmake
-- Qt 6
-- KF6KIO headers
-- KF6IconThemes headers
-
-On Debian and derivatives, this is `apt install cmake qt6-base-dev libkf6iconthemes-dev libkf6kio-dev`.
-
-Then clone the repository and compile it:
-
-```shell
-git clone https://github.com/jlu5/bookmarksync
-cd bookmarksync
-cmake .
-make -j$(nproc)
-```
-
-The resulting binary will be named `bookmarksync`.
 
 ## Under the hood
 
