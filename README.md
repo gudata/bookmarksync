@@ -1,6 +1,9 @@
 # BookmarkSync
 
-Golang implementation of the cli part of [BookmarkSync](https://github.com/jlu5/bookmarksync/)
+This is a Go (Golang) port of the CLI (command-line interface) component of [BookmarkSync](https://github.com/jlu5/bookmarksync/), implemented with the help of AI.
+
+I specifically needed and tested the -f kde flag, and it worked as expected for me.
+
 
 **BookmarkSync** is a simple program that manages the bookmarks (pinned folders) in GTK+, KDE, and Qt's native file pickers.
 
